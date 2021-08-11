@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+游戏启动资源加载
                        DESC
 
   s.homepage         = 'https://github.com/刘sama/LRSEntranceSourceLoader'
@@ -35,8 +35,22 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'LRSEntranceSourceLoader' => ['LRSEntranceSourceLoader/Assets/*.png']
   # }
+  s.subspec 'Mask' do |mask|
+    mask.source_files = 'LRSEntranceSourceLoader/Classes/Mask/**/*'
+  end
+  s.subspec 'Animation' do |animation|
+    animation.source_files = 'LRSEntranceSourceLoader/Classes/Animation/**/*'
+    animation.dependency 'LRSEntranceSourceLoader/Mask'
+  end
+  s.subspec 'Loader' do |loader|
+    loader.source_files = 'LRSEntranceSourceLoader/Classes/Loader/**/*'
+    loader.resource_bundles = {
+      'LRSEntranceSourceLoader' => ['LRSEntranceSourceLoader/Assets/*']
+    }
+    loader.dependency  'SDWebImage', '~> 5.0'
+    loader.dependency 'Masonry', '~> 1.1.0'
+    loader.dependency 'BlocksKit/Core', '~> 2.2.5'
+    loader.dependency 'LRSEntranceSourceLoader/Animation'
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

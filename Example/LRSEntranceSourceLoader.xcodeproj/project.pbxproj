@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		87A7AA1326C3C6BC0033057C /* mock.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87A7AA1226C3C6BC0033057C /* mock.plist */; };
 		FE10CAA0DCF2E30CB83306F8 /* Pods_LRSEntranceSourceLoader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72DBA6E3F3EE5EB98C3B798 /* Pods_LRSEntranceSourceLoader_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		18BFB8D62A4AFD028F0B31CC /* Pods-LRSEntranceSourceLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Example.debug.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Example/Pods-LRSEntranceSourceLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3584185A8A32373267C1FB44 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3584185A8A32373267C1FB44 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LRSEntranceSourceLoader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRSEntranceSourceLoader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,11 +62,12 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8673C61515C0BADC35495487 /* Pods_LRSEntranceSourceLoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LRSEntranceSourceLoader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A7AA1226C3C6BC0033057C /* mock.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mock.plist; sourceTree = "<group>"; };
 		95B1B6F9A1EF873648026736 /* Pods-LRSEntranceSourceLoader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Tests.release.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Tests/Pods-LRSEntranceSourceLoader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		99E6575C12EF35514F133B9B /* Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Tests/Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B27FFB37FBFD1B1911454974 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B27FFB37FBFD1B1911454974 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C5FD9D524FACB2AA641E1E41 /* Pods-LRSEntranceSourceLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Example.release.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Example/Pods-LRSEntranceSourceLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D086BEC8D7AF25A5999D517C /* LRSEntranceSourceLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LRSEntranceSourceLoader.podspec; path = ../LRSEntranceSourceLoader.podspec; sourceTree = "<group>"; };
+		D086BEC8D7AF25A5999D517C /* LRSEntranceSourceLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LRSEntranceSourceLoader.podspec; path = ../LRSEntranceSourceLoader.podspec; sourceTree = "<group>"; };
 		D72DBA6E3F3EE5EB98C3B798 /* Pods_LRSEntranceSourceLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LRSEntranceSourceLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,7 +105,6 @@
 				99E6575C12EF35514F133B9B /* Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig */,
 				95B1B6F9A1EF873648026736 /* Pods-LRSEntranceSourceLoader_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +153,7 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				87A7AA1226C3C6BC0033057C /* mock.plist */,
 			);
 			name = "Example for LRSEntranceSourceLoader";
 			path = LRSEntranceSourceLoader;
@@ -249,6 +251,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "刘sama";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 3EZ8YQY6LK;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +264,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -278,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A7AA1326C3C6BC0033057C /* mock.plist in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -347,11 +354,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LRSEntranceSourceLoader_Example/Pods-LRSEntranceSourceLoader_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
 				"${BUILT_PRODUCTS_DIR}/LRSEntranceSourceLoader/LRSEntranceSourceLoader.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LRSEntranceSourceLoader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -519,6 +532,7 @@
 			baseConfigurationReference = 18BFB8D62A4AFD028F0B31CC /* Pods-LRSEntranceSourceLoader_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3EZ8YQY6LK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Prefix.pch";
 				INFOPLIST_FILE = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist";
@@ -535,6 +549,7 @@
 			baseConfigurationReference = C5FD9D524FACB2AA641E1E41 /* Pods-LRSEntranceSourceLoader_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3EZ8YQY6LK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Prefix.pch";
 				INFOPLIST_FILE = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist";
