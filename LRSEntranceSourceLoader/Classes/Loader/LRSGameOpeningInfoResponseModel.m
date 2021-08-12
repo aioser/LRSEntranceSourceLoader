@@ -10,14 +10,14 @@
 #import "LRSEntranceSourceLoader.h"
 
 typedef NS_ENUM(NSInteger, LRSGameRoomType) {
-    SimpleGameRoom = 0,
-    StandardCupidGameRoom = 1,
-    StandardIdiotGameRoom = 2,
-    StandardBomerGameRoom = 3,
-    StandardWolfKingGameRoom = 4,
-    SimpleWolfEscapeGameRoom = 5,
-    SimpleZooGameRoom = 6,
-    SimpleFiveGoldBattle = 12
+    LRSSimpleGameRoom = 0,
+    LRSStandardCupidGameRoom = 1,
+    LRSStandardIdiotGameRoom = 2,
+    LRSStandardBomerGameRoom = 3,
+    LRSStandardWolfKingGameRoom = 4,
+    LRSSimpleWolfEscapeGameRoom = 5,
+    LRSSimpleZooGameRoom = 6,
+    LRSSimpleFiveGoldBattle = 12
 };
 
 @implementation LRSGameOpeningInfoResponseModel
@@ -42,16 +42,16 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         boardMapper = @{
-            @(SimpleGameRoom): @"simple",
+            @(LRSSimpleGameRoom): @"simple",
             
-            @(StandardCupidGameRoom): @"cupid",
-            @(StandardBomerGameRoom): @"bomber",
-            @(StandardIdiotGameRoom): @"idiot",
-            @(StandardWolfKingGameRoom): @"guard",
+            @(LRSStandardCupidGameRoom): @"cupid",
+            @(LRSStandardBomerGameRoom): @"bomber",
+            @(LRSStandardIdiotGameRoom): @"idiot",
+            @(LRSStandardWolfKingGameRoom): @"guard",
             
-            @(SimpleWolfEscapeGameRoom): @"wolfrun",
-            @(SimpleZooGameRoom): @"zoo",
-            @(SimpleFiveGoldBattle): @"newyearfight",
+            @(LRSSimpleWolfEscapeGameRoom): @"wolfrun",
+            @(LRSSimpleZooGameRoom): @"zoo",
+            @(LRSSimpleFiveGoldBattle): @"newyearfight",
         };
     });
     [source.gamePatternConfigs bk_each:^(LRSGameOpeningInfoRes *openInfo) {
