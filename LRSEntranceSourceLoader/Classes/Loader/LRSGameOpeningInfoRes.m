@@ -12,7 +12,7 @@
 
 - (void)checkVersionForKey:(NSString *)keyPath placeholderValue:(NSString *)placeholder {
     NSString *value = [self valueForKey:keyPath];
-    if (![LRSEntranceSourceLoader compareVersion:value]) {
+    if (value && ![LRSEntranceSourceLoader compareVersion:value]) {
         [self setValue:placeholder forKey:keyPath];
     }
 }
