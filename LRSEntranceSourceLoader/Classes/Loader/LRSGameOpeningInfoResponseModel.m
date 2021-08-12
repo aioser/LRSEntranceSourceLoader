@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
     LRSStandardWolfKingGameRoom = 4,
     LRSSimpleWolfEscapeGameRoom = 5,
     LRSSimpleZooGameRoom = 6,
-    LRSSimpleFiveGoldBattle = 12
+    LRSSimpleFiveGoldBattle = 14
 };
 
 @implementation LRSGameOpeningInfoResponseModel
@@ -29,6 +29,10 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
     [LRSGameOpeningInfoResponseModel checkCoverImage:simpleGames local:@"home_simple"];
     [LRSGameOpeningInfoResponseModel checkCoverImage:standardGames local:@"home_standard"];
     [LRSGameOpeningInfoResponseModel checkCoverImage:recreationGames local:@"home_entertainment"];
+    
+    [LRSGameOpeningInfoResponseModel checkGamePatternConfigs:simpleGames];
+    [LRSGameOpeningInfoResponseModel checkGamePatternConfigs:standardGames];
+    [LRSGameOpeningInfoResponseModel checkGamePatternConfigs:recreationGames];
 }
 
 + (void)checkCoverImage:(GameOpeningInfoRootModelConfigure *)source local:(NSString *)localName {
@@ -38,24 +42,24 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
 }
 
 + (void)checkGamePatternConfigs:(GameOpeningInfoRootModelConfigure *)source {
-    __block NSDictionary *boardMapper = nil;
+    static NSDictionary *boardMapper = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         boardMapper = @{
-            @(LRSSimpleGameRoom): @"simple",
+            [@(LRSSimpleGameRoom) stringValue]: @"simple",
             
-            @(LRSStandardCupidGameRoom): @"cupid",
-            @(LRSStandardBomerGameRoom): @"bomber",
-            @(LRSStandardIdiotGameRoom): @"idiot",
-            @(LRSStandardWolfKingGameRoom): @"guard",
+            [@(LRSStandardCupidGameRoom) stringValue]: @"cupid",
+            [@(LRSStandardBomerGameRoom) stringValue]: @"bomber",
+            [@(LRSStandardIdiotGameRoom) stringValue]: @"idiot",
+            [@(LRSStandardWolfKingGameRoom) stringValue]: @"guard",
             
-            @(LRSSimpleWolfEscapeGameRoom): @"wolfrun",
-            @(LRSSimpleZooGameRoom): @"zoo",
-            @(LRSSimpleFiveGoldBattle): @"newyearfight",
+            [@(LRSSimpleWolfEscapeGameRoom) stringValue]: @"wolfrun",
+            [@(LRSSimpleZooGameRoom) stringValue]: @"zoo",
+            [@(LRSSimpleFiveGoldBattle) stringValue]: @"newyearfight",
         };
     });
     [source.gamePatternConfigs bk_each:^(LRSGameOpeningInfoRes *openInfo) {
-        NSString *name = boardMapper[@(openInfo.gameRoomType)];
+        NSString *name = boardMapper[[NSString stringWithFormat:@"%lld", openInfo.gameRoomType]];
         [openInfo checkVersionForKey:@"evenPic" placeholderValue:[NSString stringWithFormat:@"board_%@_1", name]];
         [openInfo checkVersionForKey:@"oddPic" placeholderValue:[NSString stringWithFormat:@"board_%@_2", name]];
         
