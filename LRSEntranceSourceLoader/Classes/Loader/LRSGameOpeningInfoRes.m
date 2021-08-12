@@ -17,4 +17,8 @@
     }
 }
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [propertyName isEqualToString:@"roomType"];
+}
+
 @end
