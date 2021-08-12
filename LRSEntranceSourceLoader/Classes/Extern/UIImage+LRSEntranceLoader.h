@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (LRSEntranceLoader)
 
-+ (instancetype)entrance_imageNamed:(NSString *)name;
++ (instancetype _Nullable)entrance_imageNamed:(NSString *)name;
 
 @end
 
