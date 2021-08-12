@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (LRSEntranceLoader)
 - (void)lr_entrance_set_imageWithImageInfo:(NSString *)imageInfo
-                          placeholderImage:(UIImage *)placeholderImage;
+                          placeholderImage:(UIImage * _Nullable)placeholderImage;
 @end
 
 NS_ASSUME_NONNULL_END
