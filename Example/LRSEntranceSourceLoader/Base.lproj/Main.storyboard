@@ -35,15 +35,27 @@
                                     <action selector="start:" destination="whP-gf-Uak" eventType="touchUpInside" id="Xe5-TS-NRo"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzw-no-V3K">
+                                <rect key="frame" x="67.5" y="104" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9ko-ME-wLm"/>
+                                    <constraint firstAttribute="height" constant="128" id="svQ-07-wWM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AOo-eo-9ST" firstAttribute="top" secondItem="jzI-2D-GiJ" secondAttribute="bottom" constant="38" id="ca8-aX-EwE"/>
                             <constraint firstItem="AOo-eo-9ST" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="fN0-ou-LAT"/>
                             <constraint firstItem="jzI-2D-GiJ" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="gVi-YI-Kml"/>
+                            <constraint firstItem="tzw-no-V3K" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="kCE-Cd-qpk"/>
                             <constraint firstItem="AOo-eo-9ST" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="kLJ-Sh-mSV"/>
+                            <constraint firstItem="jzI-2D-GiJ" firstAttribute="top" secondItem="tzw-no-V3K" secondAttribute="bottom" constant="17" id="lE7-KI-nsD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagevView" destination="tzw-no-V3K" id="h4r-Nn-BX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

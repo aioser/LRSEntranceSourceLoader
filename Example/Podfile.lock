@@ -10,15 +10,21 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - JSONModel (1.7.0)
   - LRSEntranceSourceLoader (0.1.0):
     - LRSEntranceSourceLoader/Animation (= 0.1.0)
+    - LRSEntranceSourceLoader/Extern (= 0.1.0)
     - LRSEntranceSourceLoader/Loader (= 0.1.0)
     - LRSEntranceSourceLoader/Mask (= 0.1.0)
   - LRSEntranceSourceLoader/Animation (0.1.0):
     - LRSEntranceSourceLoader/Mask
+  - LRSEntranceSourceLoader/Extern (0.1.0):
+    - SDWebImage (~> 5.0)
   - LRSEntranceSourceLoader/Loader (0.1.0):
     - BlocksKit/Core (~> 2.2.5)
+    - JSONModel (~> 1.7.0)
     - LRSEntranceSourceLoader/Animation
+    - LRSEntranceSourceLoader/Extern
     - Masonry (~> 1.1.0)
     - SDWebImage (~> 5.0)
   - LRSEntranceSourceLoader/Mask (0.1.0)
@@ -41,6 +47,7 @@ SPEC REPOS:
     - Expecta
     - "Expecta+Snapshots"
     - FBSnapshotTestCase
+    - JSONModel
     - Masonry
     - SDWebImage
     - Specta
@@ -54,7 +61,8 @@ SPEC CHECKSUMS:
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LRSEntranceSourceLoader: af2f9691dbdc1e5a00d30d0c1bf9485052c15b43
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  LRSEntranceSourceLoader: bbb71498287ce7b19a1a8ba81a162fd77050f34f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66

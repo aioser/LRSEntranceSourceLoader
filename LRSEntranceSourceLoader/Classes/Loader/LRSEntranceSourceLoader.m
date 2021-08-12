@@ -10,44 +10,25 @@
 #import <SDWebImage/SDImageCache.h>
 #import <SDWebImage/SDWebImageManager.h>
 #import "LRSEntranceSourceLoaderView.h"
+#import "NSString+LRSEntranceURLParas.h"
 
 static int64_t kLRSEntranceSourceVersion = 1000000;
 typedef void(^LRSEntranceSourceLoaderProgressBlock)(CGFloat progress);
-
-@interface NSString(URLParameters)
-
-- (NSDictionary * _Nullable)lrs_entrance_parameters;
-
-@end
-
-@implementation NSString(URLParameters)
-
-- (NSDictionary *)lrs_entrance_parameters {
-    NSMutableDictionary * paramters = [NSMutableDictionary dictionary];
-    
-    NSURLComponents *components = [NSURLComponents componentsWithString:self];
-    [components.queryItems enumerateObjectsUsingBlock:^(NSURLQueryItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        paramters[obj.name] = obj.value;
-    }];
-    return [paramters copy];
-}
-
-- (BOOL)validURL {
-    return [self containsString:@"http"] && [self containsString:@"://"];
-}
-
-@end
 
 @implementation LRSEntranceSourceLoader
 
 + (NSArray<NSString *> *)filterRemoteConfigures:(NSArray<NSString *> *)URLs {
     return [URLs bk_select:^BOOL(NSString *obj) {
-        if (![obj validURL]) {
+        if (![obj lrs_entrance_validURL]) {
             return false;
         }
-        NSDictionary *parameter = [obj lrs_entrance_parameters];
-        return ![self diskImageDataExistsWithKey_:obj] || [parameter[@"jmv"] longLongValue] > kLRSEntranceSourceVersion;
+        return ![self diskImageDataExistsWithKey_:obj] || [self compareVersion:obj];
     }];
+}
+
++ (BOOL)compareVersion:(NSString *)url {
+    NSDictionary *parameter = [url lrs_entrance_parameters];
+    return [parameter[@"jmv"] longLongValue] > kLRSEntranceSourceVersion;
 }
 
 + (void)loadEntranceSourceLoaderViewWithBuilder:(void (^)(LRSEntranceSourceLoadViewConfigure * _Nonnull))builder {

@@ -8,10 +8,12 @@
 
 #import "LRSViewController.h"
 #import <LRSEntranceSourceLoader/LRSEntranceSourceLoader.h>
+#import <LRSEntranceSourceLoader/UIImageView+LRSEntranceLoader.h>
 #import <BlocksKit/NSArray+BlocksKit.h>
 #import <SDWebImage/SDImageCache.h>
 
 @interface LRSViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imagevView;
 
 @end
 
@@ -20,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.imagevView lr_entrance_set_imageWithImageInfo:@"board_zoo_1" placeholderImage:nil];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)start:(id)sender {

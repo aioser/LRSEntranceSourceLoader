@@ -39,15 +39,20 @@ Pod::Spec.new do |s|
     animation.source_files = 'LRSEntranceSourceLoader/Classes/Animation/**/*'
     animation.dependency 'LRSEntranceSourceLoader/Mask'
   end
+  s.subspec 'Extern' do |extern|
+      extern.source_files = 'LRSEntranceSourceLoader/Classes/Extern/**/*'
+      extern.dependency 'SDWebImage', '~> 5.0'
+  end
   s.subspec 'Loader' do |loader|
     loader.source_files = 'LRSEntranceSourceLoader/Classes/Loader/**/*'
     loader.resource_bundles = {
       'LRSEntranceSourceLoader' => ['LRSEntranceSourceLoader/Assets/*']
     }
-    loader.dependency  'SDWebImage', '~> 5.0'
+    loader.dependency 'SDWebImage', '~> 5.0'
     loader.dependency 'Masonry', '~> 1.1.0'
     loader.dependency 'BlocksKit/Core', '~> 2.2.5'
     loader.dependency 'LRSEntranceSourceLoader/Animation'
+    loader.dependency 'LRSEntranceSourceLoader/Extern'
+    loader.dependency  'JSONModel', '~> 1.7.0'
   end
-
 end

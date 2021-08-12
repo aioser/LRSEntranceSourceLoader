@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)loadEntranceSourceLoaderViewWithBuilder:(void(^)(LRSEntranceSourceLoadViewConfigure *configure))builder;
 
++ (BOOL)compareVersion:(NSString *)url;
+
 @end
 
 NS_ASSUME_NONNULL_END
