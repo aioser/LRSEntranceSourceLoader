@@ -8,6 +8,7 @@
 #import "LRSGameOpeningInfoResponseModel.h"
 #import <BlocksKit/NSArray+BlocksKit.h>
 #import "LRSEntranceSourceLoader.h"
+#import "UIImage+LRSEntranceLoader.h"
 
 typedef NS_ENUM(NSInteger, LRSGameRoomType) {
     LRSSimpleGameRoom = 0,
@@ -36,7 +37,7 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
 }
 
 + (void)checkCoverImage:(GameOpeningInfoRootModelConfigure *)source local:(NSString *)localName {
-    if (![LRSEntranceSourceLoader compareVersion:source.coverUrl]) {
+    if (![LRSEntranceSourceLoader compareVersion:source.coverUrl] && [UIImage entrance_imageNamed:localName]) {
         source.coverUrl = localName;
     }
 }

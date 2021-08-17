@@ -7,12 +7,13 @@
 
 #import "LRSGameOpeningInfoRes.h"
 #import "LRSEntranceSourceLoader.h"
+#import "UIImage+LRSEntranceLoader.h"
 
 @implementation LRSGameOpeningInfoRes
 
 - (void)checkVersionForKey:(NSString *)keyPath placeholderValue:(NSString *)placeholder {
     NSString *value = [self valueForKey:keyPath];
-    if (value && ![LRSEntranceSourceLoader compareVersion:value]) {
+    if (value && ![LRSEntranceSourceLoader compareVersion:value] && [UIImage entrance_imageNamed:keyPath]) {
         [self setValue:placeholder forKey:keyPath];
     }
 }
