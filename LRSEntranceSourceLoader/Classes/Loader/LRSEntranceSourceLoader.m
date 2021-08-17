@@ -22,7 +22,7 @@ typedef void(^LRSEntranceSourceLoaderProgressBlock)(CGFloat progress);
         if (![obj lrs_entrance_validURL]) {
             return false;
         }
-        return ![self diskImageDataExistsWithKey_:obj] || [self compareVersion:obj];
+        return [self compareVersion:obj] && ![self diskImageDataExistsWithKey_:obj];
     }];
 }
 
