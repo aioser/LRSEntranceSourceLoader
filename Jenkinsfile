@@ -28,7 +28,7 @@ rm -f Podfile.lock
         stage('build') {
           steps {
             dir(path: 'Example') {
-              xcodeBuild(ipaOutputDirectory: 'ipas', target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc', buildIpa: true, ignoreTestResults: true, ipaName: 'LRSEntrance_Example', ipaExportMethod: 'development', buildDir: 'buildDir')
+              xcodeBuild(ipaOutputDirectory: 'ipas', target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc', buildIpa: true, ignoreTestResults: true, ipaName: 'LRSEntrance_Example', ipaExportMethod: 'development')
             }
 
           }
