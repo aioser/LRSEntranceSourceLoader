@@ -8,19 +8,9 @@ pipeline {
     }
 
     stage('cd example') {
-      parallel {
-        stage('cd example') {
-          steps {
-            sh 'cd Example'
-          }
-        }
-
-        stage('ls') {
-          steps {
-            sh 'ls'
-          }
-        }
-
+      steps {
+        sh 'cd Example'
+        sh 'ls'
       }
     }
 
