@@ -67,7 +67,7 @@
 		99E6575C12EF35514F133B9B /* Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Tests/Pods-LRSEntranceSourceLoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B27FFB37FBFD1B1911454974 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C5FD9D524FACB2AA641E1E41 /* Pods-LRSEntranceSourceLoader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRSEntranceSourceLoader_Example.release.xcconfig"; path = "Target Support Files/Pods-LRSEntranceSourceLoader_Example/Pods-LRSEntranceSourceLoader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D086BEC8D7AF25A5999D517C /* LRSEntranceSourceLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LRSEntranceSourceLoader.podspec; path = ../LRSEntranceSourceLoader.podspec; sourceTree = "<group>"; };
+		D086BEC8D7AF25A5999D517C /* LRSEntranceSourceLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LRSEntranceSourceLoader.podspec; path = ../LRSEntranceSourceLoader.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D72DBA6E3F3EE5EB98C3B798 /* Pods_LRSEntranceSourceLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LRSEntranceSourceLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -539,7 +539,7 @@
 				GCC_PREFIX_HEADER = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Prefix.pch";
 				INFOPLIST_FILE = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.junc.entrance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -556,7 +556,7 @@
 				GCC_PREFIX_HEADER = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Prefix.pch";
 				INFOPLIST_FILE = "LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.junc.entrance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
