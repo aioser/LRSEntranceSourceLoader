@@ -45,7 +45,10 @@ rm -f Podfile.lock
 
     stage('upload ipa') {
       steps {
-        dir(path: 'build')
+        dir(path: 'build') {
+          sh 'ls'
+        }
+
       }
     }
 
