@@ -9,9 +9,9 @@ pipeline {
 
     stage('pod install') {
       steps {
-        sh 'cd Example;'
         sh '''export LANG=en_US.UTF-8
 pwd
+cd Example
 rm -f Podfile.lock
 /usr/local/bin/pod install'''
       }
