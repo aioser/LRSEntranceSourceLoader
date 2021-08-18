@@ -7,15 +7,9 @@ pipeline {
       }
     }
 
-    stage('cd example') {
-      steps {
-        sh '''cd Example;
-ls;'''
-      }
-    }
-
     stage('pod install') {
       steps {
+        sh 'cd Example;'
         sh '''export LANG=en_US.UTF-8
 pwd
 rm -f Podfile.lock
