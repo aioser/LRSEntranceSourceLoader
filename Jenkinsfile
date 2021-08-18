@@ -7,15 +7,20 @@ pipeline {
       }
     }
 
-    stage('ls') {
-      steps {
-        sh 'ls'
-      }
-    }
-
     stage('cd example') {
-      steps {
-        sh 'cd Example'
+      parallel {
+        stage('cd example') {
+          steps {
+            sh 'cd Example'
+          }
+        }
+
+        stage('ls') {
+          steps {
+            sh 'ls'
+          }
+        }
+
       }
     }
 
