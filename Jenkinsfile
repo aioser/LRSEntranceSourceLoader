@@ -10,6 +10,7 @@ pipeline {
     stage('pod') {
       steps {
         dir(path: 'Example') {
+          sh 'cd Example'
           sh '''export LANG=en_US.UTF-8
 cd ${XCS_PRIMARY_REPO_DIR}
 pwd
