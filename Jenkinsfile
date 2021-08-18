@@ -13,7 +13,7 @@ rm -f Podfile.lock
 
     stage('build') {
       steps {
-        xcodeBuild(buildDir: 'Example', bundleID: 'com.junc.entrance')
+        xcodeBuild(ipaOutputDirectory: 'ipas')
       }
     }
 
