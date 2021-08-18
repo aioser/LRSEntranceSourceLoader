@@ -13,8 +13,10 @@ rm -f Podfile.lock
 
     stage('build') {
       steps {
-        xcodeBuild(ipaOutputDirectory: 'ipas', generateArchive: true, target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader')
-        dir(path: 'Example')
+        dir(path: 'Example') {
+          xcodeBuild(ipaOutputDirectory: 'ipas', generateArchive: true, target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader')
+        }
+
       }
     }
 
