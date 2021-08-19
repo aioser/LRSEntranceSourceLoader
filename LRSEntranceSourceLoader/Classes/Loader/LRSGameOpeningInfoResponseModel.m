@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, LRSGameRoomType) {
         [openInfo checkVersionForKey:@"evenPic" placeholderValue:[NSString stringWithFormat:@"board_%@_1", name]];
         [openInfo checkVersionForKey:@"oddPic" placeholderValue:[NSString stringWithFormat:@"board_%@_2", name]];
         
-        [openInfo checkVersionForKey:@"evenMask" placeholderValue:[NSString stringWithFormat:@"board_%@_1_make", name]];
+        [openInfo checkVersionForKey:@"evenMask" placeholderValue:[NSString stringWithFormat:@"board_%@_1_mask", name]];
         [openInfo checkVersionForKey:@"oddMask" placeholderValue:[NSString stringWithFormat:@"board_%@_2_mask", name]];
         
         [openInfo checkVersionForKey:@"followIcon" placeholderValue:[NSString stringWithFormat:@"ic_follow_%@", name]];
