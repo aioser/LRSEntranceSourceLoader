@@ -13,7 +13,7 @@
 
 - (void)checkVersionForKey:(NSString *)keyPath placeholderValue:(NSString *)placeholder {
     NSString *value = [self valueForKey:keyPath];
-    if (value && ![LRSEntranceSourceLoader compareVersion:value] && [UIImage entrance_imageNamed:keyPath]) {
+    if (value && ![LRSEntranceSourceLoader compareVersion:value] && [UIImage entrance_imageNamed:placeholder]) {
         [self setValue:placeholder forKey:keyPath];
     }
 }
