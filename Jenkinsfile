@@ -60,7 +60,7 @@ rm -f pods/
       steps {
         sh 'ls'
         dir(path: 'Example') {
-          exportIpa(archiveDir: 'build', compileBitcode: true, developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc liu', signingMethod: 'Automic')
+          exportIpa(archiveDir: 'build/null-iphoneos', compileBitcode: true, developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc liu', signingMethod: 'Automic')
         }
 
       }
