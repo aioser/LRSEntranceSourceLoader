@@ -2,9 +2,6 @@ pipeline {
   agent any
   stages {
     stage('pod install') {
-      environment {
-        pod = '/usr/local/bin/pod'
-      }
       parallel {
         stage('pod install') {
           steps {
@@ -12,7 +9,7 @@ pipeline {
               sh '''export LANG=en_US.UTF-8
 rm -f Podfile.lock
 rm -f pods/
-pod install'''
+/usr/local/bin/pod'''
             }
 
           }
@@ -62,6 +59,7 @@ pod install'''
     stage('upload ipa') {
       steps {
         sh 'ls'
+        exportIpa(archiveDir: 'ArchiveDir', compileBitcode: true, developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc liu', signingMethod: 'Automic')
       }
     }
 
