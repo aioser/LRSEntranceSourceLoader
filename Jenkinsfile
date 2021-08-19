@@ -23,6 +23,12 @@ rm -f Podfile.lock
       }
     }
 
+    stage('sleep') {
+      steps {
+        sleep 2
+      }
+    }
+
     stage('build') {
       parallel {
         stage('build') {
@@ -40,6 +46,12 @@ rm -f Podfile.lock
           }
         }
 
+      }
+    }
+
+    stage('sleep2') {
+      steps {
+        sleep 2
       }
     }
 
