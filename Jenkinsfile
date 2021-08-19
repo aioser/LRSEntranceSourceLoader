@@ -59,7 +59,10 @@ rm -f pods/
     stage('upload ipa') {
       steps {
         sh 'ls'
-        exportIpa(archiveDir: 'ArchiveDir', compileBitcode: true, developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc liu', signingMethod: 'Automic')
+        dir(path: 'Example') {
+          exportIpa(archiveDir: 'ArchiveDir', compileBitcode: true, developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc liu', signingMethod: 'Automic')
+        }
+
       }
     }
 
