@@ -8,6 +8,7 @@ pipeline {
             dir(path: 'Example') {
               sh '''export LANG=en_US.UTF-8
 rm -f Podfile.lock
+rm -f pods/
 /usr/local/bin/pod install'''
             }
 
@@ -23,12 +24,18 @@ rm -f Podfile.lock
       }
     }
 
+    stage('sleep') {
+      steps {
+        sleep 2
+      }
+    }
+
     stage('build') {
       parallel {
         stage('build') {
           steps {
             dir(path: 'Example') {
-              xcodeBuild(ipaOutputDirectory: 'ipas', target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'junc', ignoreTestResults: true, ipaName: 'LRSEntrance_Example', ipaExportMethod: 'development', buildIpa: true, buildDir: './BuildDir', cleanBeforeBuild: true, cleanResultBundlePath: true, cleanTestReports: true, generateArchive: true, provideApplicationVersion: true, copyProvisioningProfile: true, symRoot: 'Root')
+              xcodeBuild(target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'Junc liu', ignoreTestResults: true, ipaExportMethod: 'development', buildIpa: true, cleanBeforeBuild: true, cleanResultBundlePath: true, cleanTestReports: true, generateArchive: true, provideApplicationVersion: true, copyProvisioningProfile: true, signingMethod: 'Automic', sdk: 'iphoneos')
             }
 
           }
@@ -43,10 +50,19 @@ rm -f Podfile.lock
       }
     }
 
+    stage('sleep2') {
+      steps {
+        sleep 2
+      }
+    }
+
     stage('upload ipa') {
       steps {
         sh 'ls'
-        dir(path: 'Example/build/build')
+        dir(path: 'Example') {
+          fileExists 'build/null-iphoneos/*.ipa'
+        }
+
       }
     }
 
