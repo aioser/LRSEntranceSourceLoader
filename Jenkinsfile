@@ -34,7 +34,7 @@ rm -f Podfile.lock
         stage('build') {
           steps {
             dir(path: 'Example') {
-              xcodeBuild(ipaOutputDirectory: 'ipas', target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'Junc liu', ignoreTestResults: true, ipaName: 'LRSEntrance_Example', ipaExportMethod: 'development', buildIpa: true, cleanBeforeBuild: true, cleanResultBundlePath: true, cleanTestReports: true, generateArchive: true, provideApplicationVersion: true, copyProvisioningProfile: true, signingMethod: 'Automic', noConsoleLog: true, sdk: 'iphoneos')
+              xcodeBuild(target: 'LRSEntranceSourceLoader_Example', xcodeWorkspaceFile: 'LRSEntranceSourceLoader', xcodeSchema: 'LRSEntranceSourceLoader-Example', bundleIDInfoPlistPath: 'LRSEntranceSourceLoader/LRSEntranceSourceLoader-Info.plist', developmentTeamID: '3EZ8YQY6LK', developmentTeamName: 'Junc liu', ignoreTestResults: true, ipaExportMethod: 'development', buildIpa: true, cleanBeforeBuild: true, cleanResultBundlePath: true, cleanTestReports: true, generateArchive: true, provideApplicationVersion: true, copyProvisioningProfile: true, signingMethod: 'Automic', noConsoleLog: true, sdk: 'iphoneos')
             }
 
           }
@@ -58,7 +58,6 @@ rm -f Podfile.lock
     stage('upload ipa') {
       steps {
         sh 'ls'
-        dir(path: 'Example/build/build')
       }
     }
 
