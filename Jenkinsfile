@@ -9,7 +9,7 @@ pipeline {
               sh '''export LANG=en_US.UTF-8
 rm -f Podfile.lock
 rm -f pods/
-/usr/local/bin/pod'''
+/usr/local/bin/pod install'''
             }
 
           }
