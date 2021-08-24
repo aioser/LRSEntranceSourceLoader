@@ -7,11 +7,11 @@
 //
 
 #import "LRSPresentedAnimationView.h"
-#import <LRSEntranceSourceLoader/LRSMaskView.h>
+#import <LRSEntranceSourceLoader/LRSEntranceMaskView.h>
 
 @interface LRSPresentedAnimationView()
 
-@property (nonatomic, strong, readwrite) LRSMaskView *backgroundMaskView;
+@property (nonatomic, strong, readwrite) LRSEntranceMaskView *backgroundMaskView;
 @property (nonatomic, strong, readwrite) UIView *contentView;
 
 @end
@@ -63,9 +63,9 @@
     }
 }
 
-- (LRSMaskView *)backgroundMaskView {
+- (LRSEntranceMaskView *)backgroundMaskView {
     if (!_backgroundMaskView) {
-        _backgroundMaskView = [LRSMaskView mask];
+        _backgroundMaskView = [LRSEntranceMaskView mask];
     }
     return _backgroundMaskView;
 }
