@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Test
     [self.imagevView lr_entrance_set_imageWithImageInfo:@"board_zoo_1" placeholderImage:nil];
 	// Do any additional setup after loading the view, typically from a nib.
 }
