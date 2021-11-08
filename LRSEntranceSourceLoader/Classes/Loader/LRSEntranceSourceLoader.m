@@ -12,7 +12,7 @@
 #import "LRSEntranceSourceLoaderView.h"
 #import "NSString+LRSEntranceURLParas.h"
 
-static int64_t kLRSEntranceSourceVersion = 20210906175001;
+static int64_t kLRSEntranceSourceVersion = 20211108160000;
 typedef void(^LRSEntranceSourceLoaderProgressBlock)(CGFloat progress);
 
 @implementation LRSEntranceSourceLoader
